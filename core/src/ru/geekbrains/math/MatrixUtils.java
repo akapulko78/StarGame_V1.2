@@ -19,7 +19,7 @@ public class MatrixUtils {
      * @param dst итоговый квадрат
      */
     public static void calcTransitionMatrix(Matrix4 mat, Rect src, Rect dst) {
-        float scaleX = dst.getWidth() / src.getWidth();
+        float scaleX = dst.getWidth() / src.getWidth(); //расчет соотношения сторон
         float scaleY = dst.getHeight() / src.getHeight();
         mat.idt().translate(dst.pos.x, dst.pos.y, 0f).scale(scaleX, scaleY, 1f).translate(-src.pos.x, -src.pos.y, 0f);
     }
